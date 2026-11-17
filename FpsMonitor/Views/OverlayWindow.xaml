@@ -1,0 +1,72 @@
+<Window x:Class="FpsMonitor.Views.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FPS Overlay"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ShowActivated="False"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize">
+
+    <Border x:Name="RootBorder"
+            Background="#D40D1117"
+            BorderBrush="#333B4A"
+            BorderThickness="1"
+            CornerRadius="10"
+            Padding="12,9">
+        <StackPanel x:Name="MetricsPanel" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,3">
+                <TextBlock x:Name="FpsText"
+                           Text="FPS: —"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           FontFamily="Consolas"
+                           Foreground="#22C55E" />
+                <TextBlock x:Name="OnePercentText"
+                           Text="  |  1%: —"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           FontFamily="Consolas"
+                           VerticalAlignment="Bottom"
+                           Margin="0,0,0,2"
+                           Foreground="#94A3B8" />
+            </StackPanel>
+
+            <TextBlock x:Name="CpuText"
+                       Text="CPU: —%"
+                       FontSize="12.5"
+                       FontWeight="SemiBold"
+                       FontFamily="Consolas"
+                       Foreground="#E2E8F0"
+                       Margin="0,1" />
+
+            <TextBlock x:Name="GpuText"
+                       Text="GPU: —%"
+                       FontSize="12.5"
+                       FontWeight="SemiBold"
+                       FontFamily="Consolas"
+                       Foreground="#E2E8F0"
+                       Margin="0,1" />
+
+            <TextBlock x:Name="VramText"
+                       Text="VRAM: —"
+                       FontSize="12.5"
+                       FontWeight="SemiBold"
+                       FontFamily="Consolas"
+                       Foreground="#CBD5E1"
+                       Margin="0,1"
+                       Visibility="Collapsed" />
+
+            <TextBlock x:Name="RamText"
+                       Text="RAM: —%"
+                       FontSize="12.5"
+                       FontWeight="SemiBold"
+                       FontFamily="Consolas"
+                       Foreground="#E2E8F0"
+                       Margin="0,1" />
+        </StackPanel>
+    </Border>
+</Window>
